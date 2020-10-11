@@ -5,12 +5,11 @@ export const bookService = {
     save,
     remove,
     getById,
-    getEmptyBook
 }
 
-var gBooks = [
+var gDefaultBooks = [
     {
-      "id": "OXeMG8wNskc",
+      "_id": "OXeMG8wNskc",
       "title": "metus hendrerit",
       "subtitle": "mi est eros convallis auctor arcu dapibus himenaeos",
       "authors": [
@@ -32,7 +31,7 @@ var gBooks = [
       }
     },
     {
-      "id": "JYOJa2NpSCq",
+      "_id": "JYOJa2NpSCq",
       "title": "morbi",
       "subtitle": "lorem euismod dictumst inceptos mi",
       "authors": [
@@ -54,7 +53,7 @@ var gBooks = [
       }
     },
     {
-      "id": "1y0Oqts35DQ",
+      "_id": "1y0Oqts35DQ",
       "title": "at viverra venenatis",
       "subtitle": "gravida libero facilisis rhoncus urna etiam",
       "authors": [
@@ -76,7 +75,7 @@ var gBooks = [
       }
     },
     {
-      "id": "kSnfIJyikTP",
+      "_id": "kSnfIJyikTP",
       "title": "dictum",
       "subtitle": "augue eu consectetur class curabitur conubia ligula in ullamcorper",
       "authors": [
@@ -98,7 +97,7 @@ var gBooks = [
       }
     },
     {
-      "id": "f4iuVmbuKCC",
+      "_id": "f4iuVmbuKCC",
       "title": "sem himenaeos aptent",
       "subtitle": "interdum per habitasse luctus purus est",
       "authors": [
@@ -120,7 +119,7 @@ var gBooks = [
       }
     },
     {
-      "id": "U2rfZO6oBZf",
+      "_id": "U2rfZO6oBZf",
       "title": "mi ante posuere",
       "subtitle": "sapien curae consectetur ultrices fringilla blandit ipsum curae faucibus",
       "authors": [
@@ -142,7 +141,7 @@ var gBooks = [
       }
     },
     {
-      "id": "xI0wrXaaAcq",
+      "_id": "xI0wrXaaAcq",
       "title": "non",
       "subtitle": "leo tortor per dapibus mattis ut conubia porttitor ligula viverra",
       "authors": [
@@ -164,7 +163,7 @@ var gBooks = [
       }
     },
     {
-      "id": "9laHCEdSpFy",
+      "_id": "9laHCEdSpFy",
       "title": "tristique",
       "subtitle": "consectetur a eu tincidunt condimentum amet nisi",
       "authors": [
@@ -186,7 +185,7 @@ var gBooks = [
       }
     },
     {
-      "id": "nGhVwZvGCGp",
+      "_id": "nGhVwZvGCGp",
       "title": "urna ornare gravida",
       "subtitle": "sem vestibulum semper convallis pharetra tempor himenaeos ut",
       "authors": [
@@ -208,7 +207,7 @@ var gBooks = [
       }
     },
     {
-      "id": "Q8Q9Lsd03BD",
+      "_id": "Q8Q9Lsd03BD",
       "title": "consequat neque volutpat",
       "subtitle": "vel quis taciti fermentum feugiat ullamcorper curae praesent",
       "authors": [
@@ -230,7 +229,7 @@ var gBooks = [
       }
     },
     {
-      "id": "bd7a76kARao",
+      "_id": "bd7a76kARao",
       "title": "risus",
       "subtitle": "pretium bibendum pharetra curabitur quisque dictumst",
       "authors": [
@@ -252,7 +251,7 @@ var gBooks = [
       }
     },
     {
-      "id": "qKyG0vqeO3e",
+      "_id": "qKyG0vqeO3e",
       "title": "interdum etiam vulputate",
       "subtitle": "velit sapien eget tincidunt nunc tortor",
       "authors": [
@@ -274,7 +273,7 @@ var gBooks = [
       }
     },
     {
-      "id": "2RvT48ZNInj",
+      "_id": "2RvT48ZNInj",
       "title": "sagittis justo",
       "subtitle": "etiam primis proin praesent placerat nisi fermentum nisi",
       "authors": [
@@ -296,7 +295,7 @@ var gBooks = [
       }
     },
     {
-      "id": "5z2s9pDXAYj",
+      "_id": "5z2s9pDXAYj",
       "title": "quam ullamcorper himenaeos",
       "subtitle": "ut placerat eu dapibus sapien sodales laoreet",
       "authors": [
@@ -318,7 +317,7 @@ var gBooks = [
       }
     },
     {
-      "id": "zBZu5cDEWha",
+      "_id": "zBZu5cDEWha",
       "title": "quis",
       "subtitle": "suscipit turpis etiam turpis libero lobortis",
       "authors": [
@@ -340,7 +339,7 @@ var gBooks = [
       }
     },
     {
-      "id": "aOI7tQuPZ2f",
+      "_id": "aOI7tQuPZ2f",
       "title": "aliquam aliquet dapibus",
       "subtitle": "neque eu purus euismod placerat adipiscing odio egestas consequat",
       "authors": [
@@ -362,7 +361,7 @@ var gBooks = [
       }
     },
     {
-      "id": "WBooB82Uvwu",
+      "_id": "WBooB82Uvwu",
       "title": "class",
       "subtitle": "elit enim ultricies amet imperdiet a molestie class elementum venenatis",
       "authors": [
@@ -384,7 +383,7 @@ var gBooks = [
       }
     },
     {
-      "id": "xm1z5bbZjlS",
+      "_id": "xm1z5bbZjlS",
       "title": "vitae",
       "subtitle": "class habitant at commodo semper ligula a bibendum",
       "authors": [
@@ -406,7 +405,7 @@ var gBooks = [
       }
     },
     {
-      "id": "u3j6QIKLlJb",
+      "_id": "u3j6QIKLlJb",
       "title": "rhoncus vivamus",
       "subtitle": "nullam class risus amet senectus scelerisque etiam curabitur",
       "authors": [
@@ -428,7 +427,7 @@ var gBooks = [
       }
     },
     {
-      "id": "vxYYYdVlEH3",
+      "_id": "vxYYYdVlEH3",
       "title": "donec mi ullamcorper",
       "subtitle": "varius malesuada augue molestie sollicitudin faucibus mi eu tempus",
       "authors": [
