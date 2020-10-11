@@ -2,9 +2,8 @@
   <section class="book-list-sec">
     <h3>Library</h3>
     <ul class="book-list clean-list">
-      <li v-for="currBook in books" :key="currBook._id">
-        <BookPreview :book="currBook" />
-      </li>
+        <book-preview  v-for="currBook in books" :key="currBook._id"
+         :book="currBook" @click.native="onBookClick(currBook._id)"/>
     </ul>
   </section>
 </template>
@@ -14,6 +13,11 @@ import BookPreview from "@/cmps/BookPreview.vue";
 
 export default {
   props: ["books"],
+  methods:{
+    onBookClick(bookId){
+      this.$emit('onBook', bookId)
+    }
+  },
   components: {
       BookPreview,
   }

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import BookApp from '../views/BookApp.vue'
+import BookDetails from '../views/BookDetails.vue'
 
 
 Vue.use(VueRouter)
@@ -17,6 +18,10 @@ const routes = [
     name: 'Books',
     component: BookApp
   },
+  {
+    path: '/book/:id',
+    component: BookDetails
+  }
 ]
 // *********************************** //
     // route level code-splitting

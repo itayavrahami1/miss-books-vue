@@ -1,13 +1,17 @@
 <template>
-  <section class="book-preview">
-    <router-link class="clean-link" :to="`/book/${book._id}`">
+      <li className="book-preview">
+        <img :src="book.thumbnail" alt="" />
+        <h3>{{ book.title }}</h3>
+        <h4>Price: {{ priceToShow }}</h4>
+      </li>
+     <!-- OPTION WITH ROUTE -->
+    <!-- <router-link class="clean-link" :to="`/book/${book._id}`">
       <article className="book-preview">
         <img :src="book.thumbnail" alt="" />
         <h3>{{ book.title }}</h3>
         <h4>Price: {{ priceToShow }}</h4>
       </article>
-    </router-link>
-  </section>
+    </router-link> -->
 </template>
 
 <script>
