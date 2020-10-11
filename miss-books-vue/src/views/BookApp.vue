@@ -16,6 +16,8 @@ export default {
       books: null,
       filterBy: {
         title: '',
+        min: 0,
+        max: Infinity,
       },
     }
   },
@@ -25,6 +27,8 @@ export default {
   },
   methods: {
     setFilter(filterBy) {
+      filterBy.min = (filterBy.min === '') ?  0:+filterBy.min;
+      filterBy.max = (filterBy.max === Infinity) ?  Infinity:+filterBy.max;
       this.filterBy = filterBy
     },
     chooseBook(bookId){
@@ -35,8 +39,9 @@ export default {
     booksToShow() {
       const filterForRegEx = (this.filterBy.title.length) ? `${this.filterBy.title}\w*`:''
       const filterRegEx = new RegExp(filterForRegEx, 'i')
+
       return this.books.filter((book) => {
-        return filterRegEx.test(book.title)
+        return filterRegEx.test(book.title) && book.listPrice.amount > this.filterBy.min && book.listPrice.amount < this.filterBy.max
       })
     },
   },

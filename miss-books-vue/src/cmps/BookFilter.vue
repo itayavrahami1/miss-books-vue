@@ -1,6 +1,10 @@
 <template>
   <section class="book-filter">
-    <input type="text" v-model="filterBy.title" @input="setFilter" placeholder="Search a book.."/>
+    <label>Title:</label>
+    <input autocomplete="off" type="text" name="title" v-model="filterBy.title" @input="setFilter" placeholder="Search a book.."/>
+    <label>Price:</label>
+    <input autocomplete="off" type="number" name="min" v-model="filterBy.min" @input="setFilter" placeholder="Min"/>-
+    <input autocomplete="off" type="number" name="max" v-model="filterBy.max" @input="setFilter" placeholder="Max"/>
   </section>
 </template>
 
@@ -10,6 +14,8 @@ export default {
     return {
       filterBy: {
         title: '',
+        min: '',
+        max: Infinity
       },
     }
   },
