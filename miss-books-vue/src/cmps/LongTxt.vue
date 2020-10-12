@@ -2,7 +2,7 @@
   <section class="book-desc flex column">
     {{ descToShow }}
     <button v-if="desc.length > 100" @click="toggleBtnTxt">
-      {{ getBtnTxt }}
+      {{ btnTxt }}
     </button>
   </section>
 </template>
@@ -16,7 +16,7 @@ export default {
     }
   },
   computed: {
-    getBtnTxt() {
+    btnTxt() {
       const btnTxt = this.isReadMore ? 'Read More' : 'Read Less'
       return btnTxt
     },

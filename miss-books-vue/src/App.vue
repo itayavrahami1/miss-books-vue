@@ -1,15 +1,19 @@
 <template>
   <div id="app" class="main-container">
     <navbar />
+    <user-msg/>
     <router-view />
   </div>
 </template>
 
 <script>
 import navbar from '@/cmps/navbar.vue'
+import UserMsg from '@/cmps/UserMsg.vue'
+
 export default {
   components: {
     navbar,
+    UserMsg
   },
 }
 </script>

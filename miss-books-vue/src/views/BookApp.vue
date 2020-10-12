@@ -30,10 +30,8 @@ export default {
   },
   methods: {
     setFilter(filterBy) {
-      // CHECK AFTER V-MIDEL.NUMBER && ZEROING THE FILTER - BOTH PRICES 0
-      filterBy.min = (filterBy.min === '') ?  0:+filterBy.min;
-      filterBy.max = (filterBy.max === Infinity) ?  Infinity:+filterBy.max;
       this.filterBy = filterBy
+      this.filterBy.max = this.filterBy.max || Infinity;
     },
     chooseBook(bookId){
       this.$router.push(`/book/${bookId}`)
