@@ -22,7 +22,7 @@ export default {
       this.msg = userMsg
       setTimeout(() => {
         this.msg = ''
-      }, 3500)
+      }, 2500)
     })
   },
   destroyed() {
