@@ -22,7 +22,7 @@ export default {
     },
     descToShow(){
         let textToShow = this.desc;
-        if (this.isReadMore) textToShow = textToShow.slice(0,99) + '...'
+        if (this.isReadMore && this.desc.length > 100) textToShow = textToShow.slice(0,99) + '...'
         return textToShow
 
     }

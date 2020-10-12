@@ -3,8 +3,9 @@
     <label>Title:</label>
     <input autocomplete="off" type="text" name="title" v-model="filterBy.title" @input="setFilter" placeholder="Search a book.."/>
     <label>Price:</label>
-    <input autocomplete="off" type="number" name="min" v-model="filterBy.min" @input="setFilter" placeholder="Min"/>-
-    <input autocomplete="off" type="number" name="max" v-model="filterBy.max" @input="setFilter" placeholder="Max"/>
+    <input autocomplete="off" type="number" name="min" v-model.number="filterBy.min" @input="setFilter" placeholder="Min"/>
+    <span>-</span>
+    <input autocomplete="off" type="number" name="max" v-model.number="filterBy.max" @input="setFilter" placeholder="Max"/>
   </section>
 </template>
 

@@ -3,6 +3,9 @@
     <book-filter @filtered="setFilter" />
     <book-list :books="booksToShow" @onBook="chooseBook"/>
   </section>
+  <div v-else class="loading flex justify-center align-center">
+      <img src="@/assets/img/loading.svg" />
+    </div>
 </template>
 
 <script>
@@ -27,6 +30,7 @@ export default {
   },
   methods: {
     setFilter(filterBy) {
+      // CHECK AFTER V-MIDEL.NUMBER && ZEROING THE FILTER - BOTH PRICES 0
       filterBy.min = (filterBy.min === '') ?  0:+filterBy.min;
       filterBy.max = (filterBy.max === Infinity) ?  Infinity:+filterBy.max;
       this.filterBy = filterBy

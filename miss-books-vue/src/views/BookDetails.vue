@@ -2,7 +2,7 @@
   <section v-if="book" class="book-details flex">
     <section class="book-img">
       <img :src="book.thumbnail" alt="" />
-      <h3 class="on-sale-banner" v-if="book.listPrice.isOnSale">ON SALE!</h3>
+      <span v-if="book.listPrice.isOnSale" class="on-sale-banner">On sale</span>
     </section>
     <section class="book-info">
       <h3>{{ book.title }}</h3>
